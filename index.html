@@ -46,9 +46,10 @@
         <!-- main -->
         <main class="container">
 
-            <ul class="row mt-5">
+            <ul class="row justify-content-center mt-5" style="padding:0">
 
-                <li v-for="song in songs" @click="toggleActive(song)" class="col text-center mt-2">
+                <li v-for="song in songs" @click="toggleActive(song)" class="col text-center mt-2"
+                    style="flex:0 0 300px;">
 
                     <!-- CARD -->
                     <div :class="{'active': song.isActive}" class="cs-card">
