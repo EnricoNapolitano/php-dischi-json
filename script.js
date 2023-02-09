@@ -14,6 +14,14 @@ const app = Vue.createApp({
         toggleActive(song) {
             song.isActive = !song.isActive;
         },
+        filterByGenre() {
+            const data = { chosen_genre: this.chosenGenre }
+            const config = { headers: { 'Content-Type': 'multipart/form-data' } };
+
+            axios.post(this.apiUri, data, config).then(res => {
+                this.songs = res.data;
+            })
+        },
     },
     mounted() {
         axios.get(this.apiUri).then(res => {
