@@ -1,9 +1,45 @@
+/* COLORS */
+:root {
+    --c-primary: #06131f;
+    --c-secondary: #1d2d3c;
+}
+
 /* GENERICS */
 body {
-    background-color: #1d2d3c;
+    background-color: var(--c-secondary);
 }
 
 header {
-    background-color: #06131f;
+    background-color: var(--c-primary);
     height: 90px;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+figure {
+    margin: 0;
+    width: 200px;
+    height: 200px;
+}
+
+li {
+    background-color: var(--c-primary);
+    color: white;
+    margin: 10px;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+/* UTILITIES */
+.col {
+    flex: 0;
+    /* default bootstrap: flex: 1 0 0; */
 }

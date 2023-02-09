@@ -31,15 +31,22 @@
         </header>
 
         <!-- main -->
-        <main>
-            <ul>
-                <li v-for="song in songs">
+        <main class="container">
+            <ul class="row mt-5">
+                <li v-for="song in songs" class="col text-center mt-2">
+
+                    <!-- poster img -->
                     <figure>
-                        <img :src="song.poster" :alt="song.title">
+                        <img class="img-fluid p-3" :src="song.poster" :alt="song.title">
                     </figure>
-                    <h3>{{song.title}}</h3>
-                    <h5>{{ song. author }}</h5>
-                    <h3>{{song.year}}</h3>
+
+                    <!-- song's info -->
+                    <div class="text">
+                        <h4>{{song.title}}</h4>
+                        <h6>{{ song. author }}</h6>
+                        <h4>{{song.year}}</h4>
+                    </div>
+
                 </li>
             </ul>
         </main>
