@@ -12,9 +12,12 @@ $discs = json_decode($json_data,true);
 $genre = $_POST['chosen_genre'] ?? '';
 
 if($genre){
-    $discs = array_filter($discs, function ($disc) {
-        return $disc['genre'] === $_POST['chosen_genre'];
-    });
+    if($_POST['chosen_genre'] === '-- --') $discs; //back to main page
+    else {
+        $discs = array_filter($discs, function ($disc) {
+            return $disc['genre'] === $_POST['chosen_genre'];
+        });
+    }
 }
 
 //encoding (from php to json)

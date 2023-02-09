@@ -6,7 +6,7 @@ const app = Vue.createApp({
         return {
             apiUri: 'http://localhost/php-dischi-json/discs.php',
             songs: [],
-            genre: ['Pop', 'Jazz', 'Rock', 'Metal'],
+            genre: ['-- --', 'Pop', 'Jazz', 'Rock', 'Metal'],
             chosenGenre: '',
         }
     },
