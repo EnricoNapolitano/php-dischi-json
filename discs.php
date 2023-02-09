@@ -73,6 +73,14 @@ $discs = [
     ],
 ];
 
+$genre = $_POST['chosen_genre'] ?? '';
+
+if($genre){
+    $discs = array_filter($discs, function ($disc) {
+        return $disc['genre'] === $_POST['chosen_genre'];
+    });
+}
+
 header ('Content-Type: application/json');
 
 echo json_encode($discs);
