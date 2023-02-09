@@ -37,9 +37,3 @@ li {
 
     cursor: pointer;
 }
-
-/* UTILITIES */
-.col {
-    flex: 0;
-    /* default bootstrap: flex: 1 0 0; */
-}
