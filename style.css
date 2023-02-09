@@ -44,7 +44,7 @@ li {
 .active {
     background-color: rgba(5, 18, 31, 0.9);
 
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
