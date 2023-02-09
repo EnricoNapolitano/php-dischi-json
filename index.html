@@ -33,8 +33,8 @@
 
                     <!-- input group -->
                     <div class="input-group">
-                        <select class="form-select" name="genre" id="genre">
-                            <option v-for="el in genre">{{el}}</option>
+                        <select v-model="chosenGenre" class="form-select" name="genre" id="genre">
+                            <option v-for="el in genre" :value="el">{{el}}</option>
                         </select>
                         <button class="btn btn-primary">Invia</button>
                     </div>

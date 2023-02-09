@@ -7,12 +7,13 @@ const app = Vue.createApp({
             apiUri: 'http://localhost/php-dischi-json/discs.php',
             songs: [],
             genre: ['Pop', 'Jazz', 'Rock', 'Metal'],
+            chosenGenre: '',
         }
     },
     methods: {
         toggleActive(song) {
             song.isActive = !song.isActive;
-        }
+        },
     },
     mounted() {
         axios.get(this.apiUri).then(res => {
