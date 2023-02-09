@@ -8,6 +8,11 @@ const app = Vue.createApp({
             songs: [],
         }
     },
+    methods: {
+        toggleActive(song) {
+            song.isActive = !song.isActive;
+        }
+    },
     mounted() {
         axios.get(this.apiUri).then(res => {
             this.songs = res.data; //saving datas in songs array

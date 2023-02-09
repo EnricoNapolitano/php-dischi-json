@@ -1,7 +1,7 @@
 /* COLORS */
 :root {
-    --c-primary: #06131f;
-    --c-secondary: #1d2d3c;
+    --c-primary: rgb(5, 18, 31);
+    --c-secondary: rgb(29, 45, 60);
 }
 
 /* GENERICS */
@@ -30,10 +30,33 @@ li {
     margin: 10px;
     list-style: none;
 
+    cursor: pointer;
+}
+
+.cs-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
-    cursor: pointer;
+/* CARD ON CLICK */
+.active {
+    background-color: rgba(5, 18, 31, 0.9);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.active figure {
+    width: 400px;
+    height: 400px;
+}
+
+.active h4,
+.active h6 {
+    font-size: 2rem;
 }

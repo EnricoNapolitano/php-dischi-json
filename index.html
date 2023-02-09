@@ -32,19 +32,24 @@
 
         <!-- main -->
         <main class="container">
+
             <ul class="row mt-5">
-                <li v-for="song in songs" class="col text-center mt-2">
 
-                    <!-- poster img -->
-                    <figure>
-                        <img class="img-fluid p-3" :src="song.poster" :alt="song.title">
-                    </figure>
+                <li v-for="song in songs" @click="toggleActive(song)" class="col text-center mt-2">
 
-                    <!-- song's info -->
-                    <div class="text">
-                        <h4>{{song.title}}</h4>
-                        <h6>{{ song. author }}</h6>
-                        <h4>{{song.year}}</h4>
+                    <!-- CARD -->
+                    <div :class="{'active': song.isActive}" class="cs-card">
+                        <!-- poster img -->
+                        <figure>
+                            <img class="img-fluid p-3" :src="song.poster" :alt="song.title">
+                        </figure>
+
+                        <!-- song's info -->
+                        <div class="text">
+                            <h4>{{song.title}}</h4>
+                            <h6>{{ song. author }}</h6>
+                            <h4>{{song.year}}</h4>
+                        </div>
                     </div>
 
                 </li>
