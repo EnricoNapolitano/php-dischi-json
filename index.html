@@ -27,7 +27,20 @@
     <div id="app">
 
         <!-- header -->
-        <header>
+        <header class="d-flex">
+            <div class="container d-flex align-items-center justify-content-end">
+                <form>
+
+                    <!-- input group -->
+                    <div class="input-group">
+                        <select class="form-select" name="genre" id="genre">
+                            <option v-for="el in genre">{{el}}</option>
+                        </select>
+                        <button class="btn btn-primary">Invia</button>
+                    </div>
+
+                </form>
+            </div>
         </header>
 
         <!-- main -->
